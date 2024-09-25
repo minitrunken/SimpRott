@@ -1,0 +1,11 @@
+## Interface: 100107
+## Title: test
+## Notes: Shows a spell and a colored box with navigation buttons
+## Author: YourName
+## Version: 1.0
+
+
+Hooker.lua
+combatchecker.lua
+keys.lua
+spellist.lua
