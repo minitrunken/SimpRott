@@ -81,6 +81,28 @@ local RetpalaAbilities = {
 }
 
 
+local ProtpalaAbilities = {
+{ name = "Consecration", key = "F1" },
+{ name = "Blessed Hammer", key = "F2" },
+{ name = "Hand of Reckoning", key = "F3" },
+{ name = "Avenger's Shield", key = "F4" },
+{ name = "Avenging Wrath", key = "F5" },
+{ name = "Hammer of Wrath", key = "F6" },
+{ name = "Judgment", key = "F7" },
+{ name = "Shield of the Righteous", key = "F8" },
+{ name = "Divine Toll", key = "F9" },
+{ name = "Holy Bulwark", key = "F10" },
+{ name = "Devotion Aura", key = "F11" },
+{ name = "Word of Glory", key = "F12" },
+{ name = "Ardent Defender", key = "SHIFT-F1" },
+{ name = "Sentinel", key = "SHIFT-F2" },
+{ name = "Lay on Hands", key = "SHIFT-F3" }
+}
+
+
+
+--{ name = "22222", key = "22222" },
+
 
 
 
@@ -121,6 +143,9 @@ local function LoadKeybindings()
 	elseif class == "PALADIN" and specID == 70 then
         RebindAbilities(RetpalaAbilities)
         print("Pala Ret keybindings loaded!")
+	elseif class == "PALADIN" and specID == 66 then
+        RebindAbilities(ProtpalaAbilities)
+        print("Pala Prot keybindings loaded!")
     else
         print("No keybindings for this class/spec!")
     end

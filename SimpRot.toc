@@ -5,7 +5,9 @@
 ## Version: 1.0
 
 
-Hooker.lua
+spellist.lua
+
 combatchecker.lua
 keys.lua
-spellist.lua
+Hooker.lua
+

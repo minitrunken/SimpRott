@@ -42,11 +42,29 @@ HR.MainIconFrame.ChangeIcon = function(self, icon, keybind, usable, outofrange, 
     UpdateMainColorBox(id)
 end
 
-
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 frame:SetScript("OnEvent", function(self, event)
     if not UnitExists("target") then
         UpdateMainColorBox(nil)   -- Reset main color box when no target
     end
+end)
+
+-- Function to get the player's current specialization and load the appropriate spell list
+local function LoadSpellListBasedOnSpec()
+    local specID = GetSpecializationInfo(GetSpecialization())
+    if specID == 66 then  -- Protection Paladin spec ID
+        print("Loading Protection Paladin spell list")
+        spellColorList = protection_paladin_spellList
+    else
+        print("No spell list defined for this spec ID: ", specID)
+    end
+end
+
+-- Hook into the PLAYER_LOGIN and ACTIVE_TALENT_GROUP_CHANGED events to check spec
+local frame = CreateFrame("Frame")
+frame:RegisterEvent("PLAYER_LOGIN")
+frame:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
+frame:SetScript("OnEvent", function(self, event, ...)
+    LoadSpellListBasedOnSpec()
 end)

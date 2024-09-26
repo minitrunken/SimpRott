@@ -1,31 +1,26 @@
--- Create a table to map spell IDs to colors
-spellColorList = {
-    -- Abilities
+
 	
---Shaman--###############################################
-    [192106] = {r = 0.1, g = 0.1, b = 0.9, texture = 136051},    -- Lightning Shield
-    [115356] = {r = 0.6, g = 0.5, b = 0.5, texture = 1029585},   -- Windstrike (Cyan)
-    [187874] = {r = 0.7, g = 0.6, b = 0.4, texture = 1247265},   -- Crash Lightning (Magenta)
-    [384352] = {r = 0.1, g = 0.6, b = 0.4, texture = 1390944},   -- Doom Winds (Purple)
-    [51533]  = {r = 0.1, g = 0.7, b = 0.3, texture = 237577},    -- Feral Spirit (Olive)
-    [342240] = {r = 0.7, g = 0.2, b = 0.3, texture = 135833},    -- Ice Strike (Aqua)
-    [60103]  = {r = 1, g = 0.9, b = 0.1, texture = 135814},      -- Lava Lash (Salmon)
-    [17364]  = {r = 0.5, g = 0.4, b = 0.6, texture = 132314},    -- Stormstrike (Turquoise)
-    [197214] = {r = 0.9, g = 0.8, b = 0.2, texture = 1380678},   -- Sundering (Red-Orange)
-    [188443] = {r = 0.8, g = 0.7, b = 0.3, texture = 136015},    -- Chain Lightning
-    [33757]  = {r = 0.1, g = 0.3, b = 0.7, texture = 132204},    -- Windfury Weapon
-    [318038] = {r = 0.1, g = 0.2, b = 0.8, texture = 135814},    -- Flame Tongue
-    [188389] = {r = 0.4, g = 0.3, b = 0.7, texture = 135807},    -- Flame Shock
-    [188196] = {r = 1, g = 0.5, b = 0, texture = 135990},        -- Lightning Bolt
-    [452201] = {r = 0.9, g = 0, b = 0.1, texture = 4630473},     -- Tempest
-    [196840] = {r = 0.8, g = 0.1, b = 0.2, texture = 135849},    -- Frost Shock
-
---Shaman--
-
+enhnc_sham_spellList = {
+    [192106] = {r = 0.1, g = 0.1, b = 0.9},    -- Lightning Shield
+    [115356] = {r = 0.6, g = 0.5, b = 0.5},   -- Windstrike (Cyan)
+    [187874] = {r = 0.7, g = 0.6, b = 0.4},   -- Crash Lightning (Magenta)
+    [384352] = {r = 0.1, g = 0.6, b = 0.4},   -- Doom Winds (Purple)
+    [51533]  = {r = 0.1, g = 0.7, b = 0.3},    -- Feral Spirit (Olive)
+    [342240] = {r = 0.7, g = 0.2, b = 0.3},    -- Ice Strike (Aqua)
+    [60103]  = {r = 1, g = 0.9, b = 0.1},      -- Lava Lash (Salmon)
+    [17364]  = {r = 0.5, g = 0.4, b = 0.6},    -- Stormstrike (Turquoise)
+    [197214] = {r = 0.9, g = 0.8, b = 0.2},   -- Sundering (Red-Orange)
+    [188443] = {r = 0.8, g = 0.7, b = 0.3},    -- Chain Lightning
+    [33757]  = {r = 0.1, g = 0.3, b = 0.7},    -- Windfury Weapon
+    [318038] = {r = 0.1, g = 0.2, b = 0.8},    -- Flame Tongue
+    [188389] = {r = 0.4, g = 0.3, b = 0.7},    -- Flame Shock
+    [188196] = {r = 1, g = 0.5, b = 0},        -- Lightning Bolt
+    [452201] = {r = 0.9, g = 0, b = 0.1},     -- Tempest
+    [196840] = {r = 0.8, g = 0.1, b = 0.2},    -- Frost Shock
+}
 
 
---Demon Hunter--#########################################
-
+havoc_dh_spellList = {
 [258920] = {r = 0.1, g = 0.1, b = 0.9},
 [179057] = {r = 0.1, g = 0.2, b = 0.8}, 
 [232893] = {r = 0.1, g = 0.3, b = 0.7}, 
@@ -45,30 +40,19 @@ spellColorList = {
 [258860] = {r = 0.8, g = 0.7, b = 0.3}, 
 [198013] = {r = 0.9, g = 0.8, b = 0.2}, 
 [211881] = {r = 1, g = 0.9, b = 0.1}, 
-
---Demon Hunter--
-
+}
 
 
---Paladin--################################################
 
---Retri--
-
---herotalent--
+retri_paladin_spellList = {
 [114163] = {r = 0.1, g = 0.1, b = 0.9},
 [198137] = {r = 0.1, g = 0.2, b = 0.8},
---herotalent--
-
---global--
 [35395] = {r = 0.1, g = 0.3, b = 0.7},
 [53600] = {r = 0.1, g = 0.4, b = 0.6},
 [20271] = {r = 0.1, g = 0.5, b = 0.5},
 [853] = {r = 0.1, g = 0.6, b = 0.4},
 [26573] = {r = 0.1, g = 0.7, b = 0.3},
 [62124] = {r = 0.1, g = 0.8, b = 0.2},
---global--
-
---Retri--
 [85256] = {r = 0.1, g = 0.9, b = 0.1},
 [304971] = {r = 0.1, g = 1, b = 0},
 [1022] = {r = 0.2, g = 0.1, b = 0.9},
@@ -89,42 +73,37 @@ spellColorList = {
 [642] = {r = 0.4, g = 0.5, b = 0.6},
 [391054] = {r = 0.4, g = 0.5, b = 0.6},
 [53385] = {r = 0.2, g = 0.7, b = 0.8},
+}
 
+protection_paladin_spellList = {
+[26573] = {r = 0.1, g = 0.1, b = 0.9},
+[204019] = {r = 0.1, g = 0.2, b = 0.8},
+[62124] = {r = 0.1, g = 0.3, b = 0.7},
+[31935] = {r = 0.1, g = 0.4, b = 0.6},
+[31884] = {r = 0.1, g = 0.5, b = 0.5},
+[24275] = {r = 0.1, g = 0.6, b = 0.4},
+[275779] = {r = 0.1, g = 0.7, b = 0.3},
+[53600] = {r = 0.1, g = 0.8, b = 0.2},
+[375576] = {r = 0.1, g = 0.9, b = 0.1},
+[432459] = {r = 0.1, g = 1, b = 0},
+[465] = {r = 0.2, g = 0.1, b = 0.9},
+[85673] = {r = 0.3, g = 0.2, b = 0.8},
+[31850] = {r = 0.4, g = 0.3, b = 0.7},
+[389539] = {r = 0.5, g = 0.4, b = 0.6},
+[633] = {r = 0.6, g = 0.5, b = 0.5},
 
-
---Retri--
-
-
-
---Paladin--
-
-
-
-
-
-
-
-
-
-
-
-
---Utility--
 [999910] = {r = 0, g = 0, b = 0},  -- Waiting pool
---Utility--
-
-
---Trinkets--
-[999911] = {r = 1, g = 0, b = 1},  -- Purple for Trinket 1
-[999912] = {r = 0, g = 1, b = 1},  -- Cyan for Trinket 2
---Trinkets--
 
 
 
 }
 
 
-
-
-
 -- 20kvm platta men kantelement 300mm   100mm iso 100mm betong
+
+
+--Utility--
+--
+--Utility--
+
+--[22222] = 222222,
