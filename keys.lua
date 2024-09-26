@@ -96,7 +96,10 @@ local ProtpalaAbilities = {
 { name = "Word of Glory", key = "F12" },
 { name = "Ardent Defender", key = "SHIFT-F1" },
 { name = "Sentinel", key = "SHIFT-F2" },
-{ name = "Lay on Hands", key = "SHIFT-F3" }
+{ name = "Lay on Hands", key = "SHIFT-F3" },
+{ name = "Guardian of Ancient Kings", key = "SHIFT-F4" },
+{ name = "Divine Toll", key = "SHIFT-F5" },
+{ name = "Eye of Tyr", key = "SHIFT-F6" }
 }
 
 
