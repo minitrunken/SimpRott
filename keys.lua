@@ -49,34 +49,34 @@ local demonHunterAbilities = {
 
 
 local RetpalaAbilities = {
-{ name = "Eternal Flame", key = "F1" },
-{ name = "Hammer of Light", key = "F2" },
-{ name = "Crusader Strike", key = "F3" },
-{ name = "Shield of the Righteous", key = "F4" },
-{ name = "Judgment", key = "F5" },
-{ name = "Hammer of Justice", key = "F6" },
-{ name = "Consecration", key = "F7" },
-{ name = "Hand of Reckoning", key = "F8" },
-{ name = "Templar's Verdict", key = "F9" },
-{ name = "Divine Toll", key = "F10" },
-{ name = "Blessing of Protection", key = "F11" },
-{ name = "Avenging Wrath", key = "F12" },
-{ name = "Rebuke", key = "SHIFT-F1" },
-{ name = "Blinding Light", key = "SHIFT-F2" },
-{ name = "Repentance", key = "SHIFT-F3" },
-{ name = "Turn Evil", key = "SHIFT-F4" },
-{ name = "Hammer of Wrath", key = "SHIFT-F5" },
-{ name = "Blessing of Freedom", key = "SHIFT-F6" },
-{ name = "Lay on Hands", key = "SHIFT-F7" },
-{ name = "Wake of Ashes", key = "SHIFT-F8" },
-{ name = "Blade of Justice", key = "SHIFT-F9" },
-{ name = "Final Reckoning", key = "SHIFT-F10" },
-{ name = "Final Verdict", key = "SHIFT-F11" },
-{ name = "Divine Shield", key = "SHIFT-F12" },
-{ name = "Shield of Vengeance", key = "CTRL-F1" },
-{ name = "Divine Protection", key = "CTRL-F2" },
-{ name = "Intercession", key = "CTRL-F3" },
-{ name = "Divine Storm", key = "CTRL-F4" }
+{ name = "Blade of Justice", key = "F1" },
+{ name = "Divine Toll", key = "F2" },
+{ name = "Execution Sentence", key = "F3" },
+{ name = "Wake of Ashes", key = "F4" },
+{ name = "Final Verdict", key = "F5" },
+{ name = "Judgment", key = "F6" },
+{ name = "Templar Strike", key = "F7" },
+{ name = "Hammer of Wrath", key = "F8" },
+{ name = "Shield of Vengeance", key = "F9" },
+{ name = "Avenging Wrath", key = "F10" },
+{ name = "Templar Slash", key = "F11" },
+{ name = "Divine Storm", key = "F12" },
+--{ name = "Hammer of Light", key = "SHIFT-F1" },
+{ name = "", key = "SHIFT-F2" },
+{ name = "", key = "SHIFT-F3" },
+{ name = "", key = "SHIFT-F4" },
+{ name = "", key = "SHIFT-F5" },
+{ name = "", key = "SHIFT-F6" },
+{ name = "", key = "SHIFT-F7" },
+{ name = "", key = "SHIFT-F8" },
+{ name = "", key = "SHIFT-F9" },
+{ name = "", key = "SHIFT-F10" },
+{ name = "", key = "SHIFT-F11" },
+{ name = "", key = "SHIFT-F12" },
+{ name = "", key = "CTRL-F1" },
+{ name = "", key = "CTRL-F2" },
+{ name = "", key = "CTRL-F3" },
+{ name = "", key = "CTRL-F4" }
 
 }
 
@@ -99,10 +99,28 @@ local ProtpalaAbilities = {
 { name = "Lay on Hands", key = "SHIFT-F3" },
 { name = "Guardian of Ancient Kings", key = "SHIFT-F4" },
 { name = "Divine Toll", key = "SHIFT-F5" },
-{ name = "Eye of Tyr", key = "SHIFT-F6" }
+{ name = "Eye of Tyr", key = "SHIFT-F6" },
+--F7 427453 - hammer of light (eye of tyr upgrade)
+{ name = "Moment of Glory", key = "SHIFT-F8" },
 }
 
-
+local ProtwarriorAbilities = {
+{ name = "Battle Shout", key = "F1" },
+{ name = "Last Stand", key = "F2" },
+{ name = "Thunder Clap", key = "F3" },
+{ name = "Shield Slam", key = "F4" },
+{ name = "Ignore Pain", key = "F5" },
+{ name = "Revenge", key = "F6" },
+{ name = "Charge", key = "F7" },
+{ name = "Shield Block", key = "F8" },
+{ name = "Execute", key = "F9" },
+{ name = "Impending Victory", key = "F10" },
+{ name = "Avatar", key = "F11" },
+{ name = "Ravager", key = "F12" },
+{ name = "Shield Charge", key = "SHIFT-F1" },
+{ name = "Thunderous Roar", key = "SHIFT-F2" },
+{ name = "Demoralizing Shout", key = "SHIFT-F3" },
+}
 
 --{ name = "22222", key = "22222" },
 
@@ -120,10 +138,10 @@ function RebindAbilities(abilities)
             if success then
                 print("Bound " .. ability.name .. " to " .. hotkey)
             else
-                print("Error: Failed to bind spell '" .. ability.name .. "' to key " .. hotkey)
+                print("|cffff0000Error: Failed to bind spell '" .. ability.name .. "' to key " .. hotkey)
             end
         else
-            print("Error: Missing hotkey or spell name for binding")
+            print("|cffff0000Error: Missing hotkey or spell name for binding")
         end
     end
     SaveBindings(GetCurrentBindingSet()) -- Save changes permanently
@@ -138,19 +156,22 @@ local function LoadKeybindings()
     -- Enhancement Shaman: Check if the player is a Shaman and in the Enhancement spec
     if class == "SHAMAN" and specID == 263 then
         RebindAbilities(shamanAbilities)
-        print("Enhancement Shaman keybindings loaded!")
+        print("|cff00ff00Enhancement Shaman keybindings loaded!")
     -- Havoc Demon Hunter: Check if the player is a Demon Hunter and in the Havoc spec
     elseif class == "DEMONHUNTER" and specID == 577 then
         RebindAbilities(demonHunterAbilities)
-        print("Havoc Demon Hunter keybindings loaded!")
+        print("|cff00ff00Havoc Demon Hunter keybindings loaded!")
 	elseif class == "PALADIN" and specID == 70 then
         RebindAbilities(RetpalaAbilities)
-        print("Pala Ret keybindings loaded!")
+        print("|cff00ff00Pala Ret keybindings loaded!")
 	elseif class == "PALADIN" and specID == 66 then
         RebindAbilities(ProtpalaAbilities)
-        print("Pala Prot keybindings loaded!")
+        print("|cff00ff00Pala Prot keybindings loaded!")
+	elseif class == "WARRIOR" and specID == 73 then
+        RebindAbilities(ProtwarriorAbilities)
+        print("|cff00ff00Warrior Prot keybindings loaded!")
     else
-        print("No keybindings for this class/spec!")
+        print("|cffff0000No keybindings for this class/spec!")
     end
 end
 

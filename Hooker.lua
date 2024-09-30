@@ -20,16 +20,16 @@ local function UpdateMainColorBox(id)
     if id and id ~= 0 then
         local color = spellColorList[id]
         if color then
-            print("Found color for Main ID:", id)
+            print("|cff00ccffFound color for Main ID:", id)
             mainColorBox.texture:SetColorTexture(color.r, color.g, color.b, 1)
             lastMainAbilityID = id
         else
-            print("No color for Main ID:", id)
+            print("|cffff0000No color for Main ID:", id)
             mainColorBox.texture:SetColorTexture(0, 0, 0, 1)
             lastMainAbilityID = nil
         end
     else
-        print("No main ability showing. Set to black.")
+        print("|cffff8000No main ability showing. Set to black.")
         mainColorBox.texture:SetColorTexture(0, 0, 0, 1)
         lastMainAbilityID = nil
     end
@@ -54,10 +54,20 @@ end)
 local function LoadSpellListBasedOnSpec()
     local specID = GetSpecializationInfo(GetSpecialization())
     if specID == 66 then  -- Protection Paladin spec ID
-        print("Loading Protection Paladin spell list")
+        print("|cff00ff00Loading Protection Paladin spell list")
         spellColorList = protection_paladin_spellList
+
+	elseif specID == 70 then
+        print("|cff00ff00Loading Retribution Paladin spell list")
+        spellColorList = retri_paladin_spellList
+	elseif specID == 263 then
+        print("|cff00ff00Loading Enhancement Shaman spell list")
+        spellColorList = enhnc_sham_spellList
+	elseif specID == 73 then
+        print("|cff00ff00Loading Protection Warrior spell list")
+        spellColorList = protection_warrior_spellList
     else
-        print("No spell list defined for this spec ID: ", specID)
+        print("|cff00ff00No spell list defined for this spec ID: ", specID)
     end
 end
 
