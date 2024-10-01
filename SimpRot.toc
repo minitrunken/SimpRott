@@ -5,9 +5,11 @@
 ## Version: 1.0
 
 
-spellist.lua
 
+
+class.lua
+spellist.lua
 combatchecker.lua
 keys.lua
 Hooker.lua
-
+debug.lua
