@@ -5,9 +5,13 @@
 ## Version: 1.0
 
 
-spellist.lua
 
+spellist.lua
 combatchecker.lua
 keys.lua
 Hooker.lua
-
+debug.lua
+healer.lua
+Disc.lua
+##debuff.lua
+##test.lua
