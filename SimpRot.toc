@@ -3,11 +3,14 @@
 ## Notes: Shows a spell and a colored box with navigation buttons
 ## Author: YourName
 ## Version: 1.0
+## SavedVariables: MyAddonSavedVariables
 
 
-spellist.lua
-
+##spellist.lua
 combatchecker.lua
-keys.lua
 Hooker.lua
+debug.lua
+##healer.lua
+##Disc.lua
+##debuff.lua
 
