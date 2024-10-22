@@ -61,7 +61,7 @@ local spellIDList = {
     --RACIAL END
 
     --TRINKET
-
+        --lägga till trinket id eller försöka skanna fram det och hardcodea 2 färger som blir trinket färger?
     --TRINKET END
 
 
@@ -564,13 +564,12 @@ local spellIDList = {
     {306830}, -- Elysian Decree
     {211881}, -- Fel Eruption
     {202137}, -- Sigil of Silence
-    {370965}, 
-    {210152},
-    {390163},
-    {210150},
-    {207407},
-
-
+    {370965}, -- The Hunt
+    {210152}, -- Death Sweep
+    {390163}, -- Sigil of Spite
+    {207407}, -- Soul Carver
+    {258860}, -- Essence Break
+    
     --452486
     -- END DEMON HUNTER
 
@@ -668,7 +667,7 @@ local function BindSpellsToKeysAndColors()
 
     -- Ensure spellIDList is not nil
     if not spellIDList then
-        print("Error: spellIDList is nil")
+        print("Error: Spellist not found. Contact support!!")
         return
     end
 
@@ -701,7 +700,7 @@ local function BindSpellsToKeysAndColors()
                         spellIDColors[spellID] = keyColor.color
                        dprint("|cff00ff00Stored color for spell ID:", spellID, "with color:", keyColor.color.r, keyColor.color.g, keyColor.color.b)
                     end
-                    print("|cff00ff00Successfully bound " .. keyColor.key .. " to spell: " .. spellName .. " (ID: " .. primarySpellID .. ") with color: " .. table.concat({keyColor.color.r, keyColor.color.g, keyColor.color.b}, ", "))
+                    dprint("|cff00ff00Successfully bound " .. keyColor.key .. " to spell: " .. spellName .. " (ID: " .. primarySpellID .. ") with color: " .. table.concat({keyColor.color.r, keyColor.color.g, keyColor.color.b}, ", "))
                     keyIndex = keyIndex + 1
                 else
                     dprint("|cffff0000Failed to bind " .. keyColor.key .. " to spell: " .. spellName)
