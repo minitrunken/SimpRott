@@ -56,6 +56,12 @@ local keyColorList = {
 -- List of spell IDs to bind
 local spellIDList = {
 
+    --RACIAL
+    {265221},
+    --RACIAL END
+
+
+
     --PALADIN
     {24275},  -- Hammer of Wrath
     {633},    -- Lay on Hands
@@ -151,6 +157,7 @@ local spellIDList = {
     {186270}, -- Raptor Bite
     {190925}, -- Harpoon
     {186289}, -- Aspect of the Eagle
+    {272651,388035,264667,53271},
     --END HUNTER
 
     --ROUGE
@@ -561,7 +568,7 @@ local spellIDList = {
     {207407},
     -- END DEMON HUNTER
 
--- WARLOCK
+    -- WARLOCK
 {172},     -- Corruption
 {348},     -- Immolate
 {686},     -- Shadow Bolt
@@ -581,7 +588,7 @@ local spellIDList = {
 
 --WARLOCK END
 
---DRUID
+    --DRUID
 {5487},    -- Bear Form
 {22812},   -- Barkskin
 {5221},    -- Shred
@@ -597,7 +604,7 @@ local spellIDList = {
 {106839},
 --DRUID END
 
---EVOKER
+    --EVOKER
 {361469},  -- Living Flame
 {355936},  -- Emerald Blossom
 {357208},  -- Fire Breath
