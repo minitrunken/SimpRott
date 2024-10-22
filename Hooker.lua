@@ -561,7 +561,7 @@ local spellIDList = {
     {207407},
     -- END DEMON HUNTER
 
--- WARLOCK
+    -- WARLOCK
 {172},     -- Corruption
 {348},     -- Immolate
 {686},     -- Shadow Bolt
@@ -581,7 +581,7 @@ local spellIDList = {
 
 --WARLOCK END
 
---DRUID
+    --DRUID
 {5487},    -- Bear Form
 {22812},   -- Barkskin
 {5221},    -- Shred
@@ -597,7 +597,7 @@ local spellIDList = {
 {106839},
 --DRUID END
 
---EVOKER
+    --EVOKER
 {361469},  -- Living Flame
 {355936},  -- Emerald Blossom
 {357208},  -- Fire Breath
