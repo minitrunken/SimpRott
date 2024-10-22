@@ -531,7 +531,6 @@ local spellIDList = {
     {198013}, -- Eye Beam
     {188499,210152}, -- Blade Dance
     {191427}, -- Metamorphosis (Havoc)
-    {195072}, -- Fel Rush
     {185123,442294}, -- Throw Glaive
     {258920}, -- Immolation Aura
     {196718}, -- Darkness
@@ -549,7 +548,7 @@ local spellIDList = {
     {323639}, -- The Hunt
     {263642,344859,203782}, -- Fracture
     {212084,452486}, -- Fel Devastation Fel Desolation
-    {189110,344865}, -- Infernal Strike
+    {189110,344865,195072}, -- Infernal Strike Fel Rush
     {204596,452490}, -- Sigil of Flame Sigil of Doom
     {202137}, -- Sigil of Silence
     {202138}, -- Sigil of Chains
