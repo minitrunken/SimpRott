@@ -60,6 +60,9 @@ local spellIDList = {
     {265221},
     --RACIAL END
 
+    --TRINKET
+
+    --TRINKET END
 
 
     --PALADIN
@@ -86,7 +89,7 @@ local spellIDList = {
     {31935},  -- Avenger's Shield
     {319952}, -- Consecration
     {375576}, -- Divine Toll
-    {387174}, -- Eye of Tyr
+    {387174,427453}, -- Eye of Tyr
     {86659},  -- Guardian of Ancient Kings
     {465},    -- Devotion Aura
     {26573},  -- Consecration
@@ -142,7 +145,7 @@ local spellIDList = {
     {430703}, -- Black Arrow
     {53351},  -- Kill Shot
     {56641},  -- Steady Shot
-    {19434},  -- Aimed Shot
+    {19434,392060},  -- Aimed Shot
     {186387}, -- Bursting Shot
     {342049}, -- Chimaera Shot
     {260402}, -- Double Tap
@@ -158,6 +161,7 @@ local spellIDList = {
     {190925}, -- Harpoon
     {186289}, -- Aspect of the Eagle
     {272651,388035,264667,53271},
+    
     --END HUNTER
 
     --ROUGE
@@ -544,9 +548,9 @@ local spellIDList = {
     {275144}, -- Unbound Chaos
     {323639}, -- The Hunt
     {263642,344859,203782}, -- Fracture
-    {212084}, -- Fel Devastation
+    {212084,452486}, -- Fel Devastation Fel Desolation
     {189110,344865}, -- Infernal Strike
-    {204596}, -- Sigil of Flame
+    {204596,452490}, -- Sigil of Flame Sigil of Doom
     {202137}, -- Sigil of Silence
     {202138}, -- Sigil of Chains
     {207684}, -- Sigil of Misery
@@ -566,6 +570,9 @@ local spellIDList = {
     {390163},
     {210150},
     {207407},
+
+
+    --452486
     -- END DEMON HUNTER
 
     -- WARLOCK
