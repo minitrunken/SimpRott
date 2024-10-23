@@ -1,4 +1,4 @@
-## Interface: 100107
+## Interface: 110005
 ## Title: test
 ## Notes: Shows a spell and a colored box with navigation buttons
 ## Author: YourName
