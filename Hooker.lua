@@ -161,8 +161,8 @@ local spellIDList = {
     {190925}, -- Harpoon
     {186289}, -- Aspect of the Eagle
     {272651,388035,264667,53271},
-    
-    --END HUNTER
+    {120679}, -- Dire Beast
+    {19801}, -- Tranquilizing Shot
 
     --ROUGE
     {703},    -- Garrote
@@ -486,7 +486,7 @@ local spellIDList = {
     --END PRIEST
 
     --SHAMAN
-    {188196}, -- Lightning Bolt
+    {188196,452201}, -- Lightning Bolt Tempest
     {305483}, -- Lightning Lasso
     {188389}, -- Flame Shock
     {370},    -- Purge
@@ -499,7 +499,7 @@ local spellIDList = {
     {198103}, -- Earth Elemental
     {57994},  -- Wind Shear
     {51505},  -- Lava Burst
-    {188443,452201}, -- Chain Lightning -- Tempest
+    {188443}, -- Chain Lightning 
     {974},    -- Earth Shield
     {108281}, -- Ancestral Guidance
     {378081}, -- Nature's Swiftness
@@ -523,6 +523,9 @@ local spellIDList = {
     {8042},   -- Earth Shock
     {79206},    -- Spiritwalker's Grace
     {61882,462620}, -- Earthquake
+    {470411}, -- Chain Harvest
+    {114050}, -- Ascendance
+
     --END SHAMAN
 
     -- DEMON HUNTER
