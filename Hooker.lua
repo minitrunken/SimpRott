@@ -201,7 +201,7 @@ local spellIDList = {
     {13877},  -- Blade Flurry
     {185763}, -- Pistol Shot
     {315508}, -- Roll the Bones
-    {1752,193315,1329,53}, -- Sinister Strike Mutilate
+    {1752,193315,1329,53}, -- Sinister Strike Mutilate Backstab
     {197835}, -- Shuriken Storm
     {212283}, -- Symbols of Death
     {280719}, -- Secret Technique
@@ -491,7 +491,7 @@ local spellIDList = {
     {188389}, -- Flame Shock
     {370},    -- Purge
     {318038}, -- Flametongue Weapon
-    {196840}, -- Frost Shock
+    {196840,210714}, -- Frost Shock
     {462854}, -- Skyfury
     {51886},  -- Cleanse Spirit
     {51490},  -- Thunderstrom
@@ -522,7 +522,7 @@ local spellIDList = {
     {443454}, -- Elemental Blast: Overload
     {8042},   -- Earth Shock
     {79206},    -- Spiritwalker's Grace
-    {61882}, -- Earthquake
+    {61882,462620}, -- Earthquake
     --END SHAMAN
 
     -- DEMON HUNTER
