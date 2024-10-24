@@ -361,14 +361,13 @@ local spellIDList = {
     {12051},   -- Evocation
     {1459},    -- Arcane Intellect
     {363653},  -- Stop AM
-    {108853},  -- Fire Blast
     {11366},   -- Pyroblast
     {257541},  -- Phoenix Flames
     {2948},    -- Scorch
     {190319},  -- Combustion
     {153561},  -- Meteor
     {235313},  -- Blazing Barrier
-    {133,431044},     -- Fireball
+    {133,319836},     -- Fireball
     {2120},    -- Flamestrike
     {31661},   -- Dragon's Breath
     {157980},  -- Supernova
@@ -384,7 +383,9 @@ local spellIDList = {
     {11426},   -- Ice Barrier
     {235219},  -- Cold Snap
     {190356},  -- Blizzard
-
+    {108553}, -- Ice Block
+    {319836,108853}, -- Fire Blast 
+   
     --MAGE END
 
     --WARRIOR
