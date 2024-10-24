@@ -573,49 +573,51 @@ local spellIDList = {
     {390163}, -- Sigil of Spite
     {207407}, -- Soul Carver
     {258860}, -- Essence Break
-    
     --452486
     -- END DEMON HUNTER
 
-    -- WARLOCK
-{172,348},     -- Corruption Immolate
-{686,29722},     -- Shadow Bolt Incinerate
-{689},     -- Drain Life 
-{698},     -- Ritual of Summoning
-{702},     -- Curse of Weakness
-{710},     -- Banish
-{755},     -- Health Funnel
-{980},     -- Agony
-{1120},    -- Drain Soul
-{1454},    -- Life Tap
-{30108},   -- Unstable Affliction
-{30283},   -- Shadowfury
-{48181},   -- Haunt
-{324536},  -- Malefic Rapture
-{333889},  -- Fel Domination
-{17962},
-{116858},  -- Chaos Bolt
-{80240,200546},  -- Havoc Bane of Havoc
-{5740},  -- Rain of Fire
-{152108},  -- Cataclysm
-{366222},  -- Summon Sayaad
-{196447},  -- Channel Demonfire
-{105174},  -- Hand of Gul'dan
-{30146,112870},  -- Summon Felguard Summon Wrathguard
-{264178},  -- Demonbolt
-{196277},  -- Implosion
-{267171}, -- Demonic Strength
-{104316},  -- Call Dreadstalkers
-{267211},  -- Bilescourge Bombers
-{111898}, -- Grimoire: Felguard
-{267217}, -- Nether Portal
-{264130}, -- Power Siphon
-{265187}, -- Summon Demonic Tyrant
-{264119}, -- Summon Vilefiend
-{386833}, -- Guillotine
-{89766,119914,347008}, -- Axe Toss
-    --WARLOCK END
 
+    -- WARLOCK
+    {172,348},     -- Corruption Immolate
+    {686,29722},     -- Shadow Bolt Incinerate
+    {689},     -- Drain Life 
+    {698},     -- Ritual of Summoning
+    {702},     -- Curse of Weakness
+    {710},     -- Banish
+    {755},     -- Health Funnel
+    {980},     -- Agony
+    {1120},    -- Drain Soul
+    {1454},    -- Life Tap
+    {30108},   -- Unstable Affliction
+    {30283},   -- Shadowfury
+    {48181},   -- Haunt
+    {324536},  -- Malefic Rapture
+    {333889},  -- Fel Domination
+    {17962},
+    {116858},  -- Chaos Bolt
+    {80240,200546},  -- Havoc Bane of Havoc
+    {5740},  -- Rain of Fire
+    {152108},  -- Cataclysm
+    {366222},  -- Summon Sayaad
+    {196447},  -- Channel Demonfire
+    {105174},  -- Hand of Gul'dan
+    {30146,112870},  -- Summon Felguard Summon Wrathguard
+    {264178},  -- Demonbolt
+    {196277},  -- Implosion
+    {267171}, -- Demonic Strength
+    {104316},  -- Call Dreadstalkers
+    {267211},  -- Bilescourge Bombers
+    {111898}, -- Grimoire: Felguard
+    {267217}, -- Nether Portal
+    {264130}, -- Power Siphon
+    {265187}, -- Summon Demonic Tyrant
+    {264119}, -- Summon Vilefiend
+    {386833}, -- Guillotine
+    {119898,89766,347008}, -- Axe Toss
+    {264130},   -- Power Siphon
+    {264119},   --
+    {385899},    -- Soulburn
+    --WARLOCK END
 
     --DRUID
 {5487},    -- Bear Form
@@ -666,11 +668,7 @@ local spellIDList = {
 {362969},  -- Azure Strike
 --EVOKER END
 
-
-
 }
-
-
 
 
 -- Hooker.lua
@@ -808,6 +806,3 @@ frame:SetScript("OnEvent", function(self, event, ...)
         HookHekili()
     end
 end)
-
-
-
