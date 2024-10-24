@@ -333,7 +333,7 @@ local spellIDList = {
     {2139},    -- Counterspell
     {319836},  -- Fire Blast
     {122},     -- Frost Nova
-    {116},     -- Frostbolt
+    {116,431044},     -- Frostbolt
     {120},     -- Cone of Cold
     {45438},   -- Ice Block
     {475},     -- Remove Curse
@@ -368,7 +368,7 @@ local spellIDList = {
     {190319},  -- Combustion
     {153561},  -- Meteor
     {235313},  -- Blazing Barrier
-    {133},     -- Fireball
+    {133,431044},     -- Fireball
     {2120},    -- Flamestrike
     {31661},   -- Dragon's Breath
     {157980},  -- Supernova
@@ -384,6 +384,7 @@ local spellIDList = {
     {11426},   -- Ice Barrier
     {235219},  -- Cold Snap
     {190356},  -- Blizzard
+
     --MAGE END
 
     --WARRIOR
