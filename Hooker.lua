@@ -201,12 +201,12 @@ local spellIDList = {
     {13877},  -- Blade Flurry
     {185763}, -- Pistol Shot
     {315508}, -- Roll the Bones
-    {1752,193315,53}, -- Sinister Strike Mutilate Backstab
-    {1329},
+    {1752,193315,1329,53}, -- Sinister Strike Mutilate Backstab
     {197835}, -- Shuriken Storm
     {212283}, -- Symbols of Death
     {280719}, -- Secret Technique
     {185313}, -- Shadow Dance
+    {381664}, -- Poison
     --END ROUGE
 
     --MONK
