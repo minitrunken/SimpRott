@@ -66,6 +66,7 @@ local spellIDList = {
 
 
     --PALADIN
+    {255647}, -- Lights Judgement
     {24275},  -- Hammer of Wrath
     {633},    -- Lay on Hands
     {327193}, -- Moment of Glory
