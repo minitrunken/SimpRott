@@ -327,6 +327,7 @@ local spellIDList = {
     {275699}, -- Apocalypse
     {390279}, -- Vile Contagion
     {49206}, -- Summon Gargoyle
+
     --END DEATHKNIGHT
 
     --MAGE
@@ -632,10 +633,12 @@ local spellIDList = {
 {22842},   -- Frenzied Regeneration
 {6807},    -- Maul
 {192081},  -- Ironfur
-{50334},   -- Berserk
-{106839},
+{50334,102558},   -- Berserk Incarnation
+{106839}, -- Skull Bash 
 {61336 },  -- Survival Instincts
 {2908},  -- Soothe
+{204066}, -- Lunar Beam
+{200851} -- Rage of the sleeper
 --DRUID END
 
     --EVOKER
