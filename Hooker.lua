@@ -612,7 +612,7 @@ local spellIDList = {
     {267217}, -- Nether Portal
     {264130}, -- Power Siphon
     {265187}, -- Summon Demonic Tyrant
-    {264119}, -- Summon Vilefiend
+    {264119,455476,455449}, -- Summon Vilefiend
     {386833}, -- Guillotine
     {119898,89766,347008}, -- Axe Toss
     {264130},   -- Power Siphon
