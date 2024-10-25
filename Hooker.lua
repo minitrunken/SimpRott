@@ -63,7 +63,7 @@ local spellIDList = {
     --TRINKET
         --lägga till trinket id eller försöka skanna fram det och hardcodea 2 färger som blir trinket färger?
     --TRINKET END
-
+we
 
     --PALADIN
     {255647}, -- Lights Judgement
@@ -386,7 +386,6 @@ local spellIDList = {
     {235219},  -- Cold Snap
     {190356},  -- Blizzard
     {108553}, -- Ice Block
-   
     --MAGE END
 
     --WARRIOR
@@ -452,8 +451,7 @@ local spellIDList = {
     --PRIEST
     {17},      -- Power Word: Shield
     {19236},   -- Desperate Prayer
-    {8092},    -- Mind Blast
-    {450405},  -- Void Blast
+    {8092,450983},    -- Mind Blast
     {8122},    -- Psychic Scream
     {528},     -- Dispel Magic
     {453},     -- Mind Soothe
@@ -483,8 +481,7 @@ local spellIDList = {
     {228260,205448},  -- Void Eruption & Void Bolt
     {263165},  -- Void Torrent
     {200174},  -- Mindbender
-    {451232},  -- Voidwraith
-    {34433},   -- Shadowfiend
+    {34433,451235},   -- Shadowfiend
     {585,15407,391403,73510},   -- Mind Flay & Mind Flay: insanity
     {34914},   -- Vampiric Touch
     --END PRIEST
@@ -578,7 +575,6 @@ local spellIDList = {
     --452486
     -- END DEMON HUNTER
 
-
     -- WARLOCK
     {172,348},     -- Corruption Immolate
     {686,29722},     -- Shadow Bolt Incinerate
@@ -648,9 +644,8 @@ local spellIDList = {
 {383410,194223},
 {194153},
 {391528},
-
-
-
+{441605}, -- Ravage
+{108238}, -- Renewal 
 --DRUID END
 
     --EVOKER
