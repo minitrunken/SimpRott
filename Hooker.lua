@@ -634,8 +634,8 @@ local spellIDList = {
 {192081},  -- Ironfur
 {50334},   -- Berserk
 {106839},
- {61336 },  -- Survival Instincts
- {2908},  -- Soothe
+{61336 },  -- Survival Instincts
+{2908},  -- Soothe
 --DRUID END
 
     --EVOKER
