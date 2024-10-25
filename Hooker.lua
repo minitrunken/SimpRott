@@ -638,7 +638,7 @@ local spellIDList = {
 {61336 },  -- Survival Instincts
 {2908},  -- Soothe
 {204066}, -- Lunar Beam
-{200851} -- Rage of the sleeper
+{200851}, -- Rage of the sleeper
 --DRUID END
 
     --EVOKER
