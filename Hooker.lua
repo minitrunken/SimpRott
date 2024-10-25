@@ -639,6 +639,19 @@ local spellIDList = {
 {2908},  -- Soothe
 {204066}, -- Lunar Beam
 {200851}, -- Rage of the sleeper
+{319454}, -- Heart of the Wild
+{8936}, -- Regrowth
+{93402},
+{190984},
+{205636},
+{191034},
+{383410},
+{194153},
+{391528},
+
+
+
+
 --DRUID END
 
     --EVOKER
