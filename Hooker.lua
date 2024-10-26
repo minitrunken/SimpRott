@@ -63,7 +63,7 @@ local spellIDList = {
     --TRINKET
         --lägga till trinket id eller försöka skanna fram det och hardcodea 2 färger som blir trinket färger?
     --TRINKET END
-we
+
 
     --PALADIN
     {255647}, -- Lights Judgement
