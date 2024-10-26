@@ -627,7 +627,7 @@ local spellIDList = {
 {106832,77758,106830},   -- Thrash
 {8921},    -- Moonfire
 {22842},   -- Frenzied Regeneration
-{6807},    -- Maul
+{6807,441605},    -- Maul
 {192081},  -- Ironfur
 {50334,102558},   -- Berserk Incarnation
 {106839}, -- Skull Bash 
