@@ -352,7 +352,7 @@ local spellIDList = {
     {414660},  -- Mass Barrier
     {5143},    -- Arcane Missiles
     {365350},  -- Arcane Surge
-    {205025},  -- Presence of Mind
+    {205025},  -- Presence of Mind xxxxx helt fucked
     {66},      -- Invisibility
     {110959},  -- Greater Invisibility
     {31661},   -- Dragon's Breath
@@ -371,10 +371,6 @@ local spellIDList = {
     {235313},  -- Blazing Barrier
     {133},     -- Fireball
     {2120},    -- Flamestrike
-    {31661},   -- Dragon's Breath
-    {157980},  -- Supernova
-    {113724},  -- Ring of Frost
-    {157997},  -- Ice Nova
     {30455},   -- Ice Lance
     {84714},   -- Frozen Orb
     {44614},   -- Flurry
