@@ -266,6 +266,7 @@ local spellIDList = {
     {218164}, -- Detox
     {115078}, -- Paralysis
     {115203}, -- Fortifying Brew
+    {132578}, -- Invoke Niuzao, the Black Ox
     --MONK END
 
     --DEATHKNIGHT
@@ -382,6 +383,8 @@ local spellIDList = {
     {235219},  -- Cold Snap
     {190356},  -- Blizzard
     {108553}, -- Ice Block
+    {12051}, -- Evocation
+
     --MAGE END
 
     --WARRIOR
@@ -587,7 +590,7 @@ local spellIDList = {
     {48181},   -- Haunt
     {324536},  -- Malefic Rapture
     {333889},  -- Fel Domination
-    {17962},
+    {17962},   -- Conflagrate
     {116858},  -- Chaos Bolt
     {80240,200546},  -- Havoc Bane of Havoc
     {5740},  -- Rain of Fire
@@ -607,10 +610,9 @@ local spellIDList = {
     {265187}, -- Summon Demonic Tyrant
     {264119,455476,455449}, -- Summon Vilefiend
     {386833}, -- Guillotine
-    {119898,89766,347008}, -- Axe Toss
     {264130},   -- Power Siphon
-    {264119},   --
     {385899},    -- Soulburn
+    {89766,347008,119914,119898}, -- Axe Toss
     --WARLOCK END
 
     --DRUID
@@ -675,6 +677,8 @@ local spellIDList = {
 {362969},  -- Azure Strike
 --EVOKER END
 
+
+
 }
 
 
@@ -730,17 +734,17 @@ local function BindSpellsToKeysAndColors()
                 if bindingSet then
                     for _, spellID in ipairs(spellIDs) do
                         spellIDColors[spellID] = keyColor.color
-                       dprint("|cff00ff00Stored color for spell ID:", spellID, "with color:", keyColor.color.r, keyColor.color.g, keyColor.color.b)
+                       print("|cff00ff00Stored color for spell ID:", spellID, "with color:", keyColor.color.r, keyColor.color.g, keyColor.color.b)
                     end
-                    dprint("|cff00ff00Successfully bound " .. keyColor.key .. " to spell: " .. spellName .. " (ID: " .. primarySpellID .. ") with color: " .. table.concat({keyColor.color.r, keyColor.color.g, keyColor.color.b}, ", "))
+                    print("|cff00ff00Successfully bound " .. keyColor.key .. " to spell: " .. spellName .. " (ID: " .. primarySpellID .. ") with color: " .. table.concat({keyColor.color.r, keyColor.color.g, keyColor.color.b}, ", "))
                     keyIndex = keyIndex + 1
                 else
-                    dprint("|cffff0000Failed to bind " .. keyColor.key .. " to spell: " .. spellName)
+                    print("|cffff0000Failed to bind " .. keyColor.key .. " to spell: " .. spellName)
                 end
             else
                 for _, spellID in ipairs(spellIDs) do
                     spellIDColors[spellID] = keyColorList[keyIndex - 1].color
-                    dprint("Stored color for spell ID:", spellID, "with color:", keyColorList[keyIndex - 1].color.r, keyColorList[keyIndex - 1].color.g, keyColorList[keyIndex - 1].color.b)
+                    print("Stored color for spell ID:", spellID, "with color:", keyColorList[keyIndex - 1].color.r, keyColorList[keyIndex - 1].color.g, keyColorList[keyIndex - 1].color.b)
                 end
                 dprint("|cffff0000No more keys available for binding. Assigned color to spell: " .. spellName .. " with color: " .. table.concat({keyColorList[keyIndex - 1].color.r, keyColorList[keyIndex - 1].color.g, keyColorList[keyIndex - 1].color.b}, ", "))
             end
