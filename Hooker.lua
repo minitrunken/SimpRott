@@ -273,65 +273,65 @@ local spellIDList = {
     --MONK END
 
     --DEATHKNIGHT
-    {47528}, -- Mind Freeze
-    {48707}, -- Anti-Magic Shell
-    {51052}, -- Anti-Magic Zone
-    {49576}, -- Death Grip
-    {46585}, -- Raise Dead
-    {49998}, -- Death Strike
-    {45524}, -- Chains of Ice
+    {47528},    -- Mind Freeze
+    {48707},    -- Anti-Magic Shell
+    {51052},    -- Anti-Magic Zone
+    {49576},    -- Death Grip
+    {46585},    -- Raise Dead
+    {49998},    -- Death Strike
+    {45524},    -- Chains of Ice
     {43265,152280}, -- Death and Decay
-    {48792}, -- Icebound Fortitude
-    {343294}, -- Soul Reaper
-    {49039}, -- Lichborne
-    {47541}, -- Death Coil
-    {47568}, -- Empower Rune Weapon
-    {49143}, -- Frost Strike
-    {279302}, -- Frostwyrm's Fury
-    {49184}, -- Howling Blast
-    {51271}, -- Pillar of Frost
-    {49020}, -- Obliterate
-    {196770}, -- Remorseless Winter
-    {152279}, -- Breath of Sindragosa
-    {305392}, -- Chill Streak
-    {57330}, -- Horn of Winter
-    {194913}, -- Glacial Advance
-    {207230}, -- Frostscthe
-    {383269}, -- Abomination Limb
-    {221562}, -- Asphyxiate
-    {327574}, -- Sacrificial Pact
-    {207167}, -- Blinding Sleet
-    {439843}, -- Reaper's Mark
-    {48743}, -- Death Pact
-    {316239,206930,433895,49020,85948}, -- Heart Strike & Vampiric Strike & Obliterate & Runestrike & Festering Strike
-    {195182}, -- Marrowrend
-    {50842}, -- Blood Boil
-    {55233}, -- Vampiric Blood
-    {49028}, -- Dancing Rune Weapon
-    {108199}, -- Gorefiend's Grasp
-    {194679}, -- Rune Tap
-    {221699}, -- Blood Tap
-    {206940}, -- Mark of Blood
-    {219809}, -- Tombstone
-    {206931}, -- Blooddrinker
-    {274156}, -- Consumption
-    {194844}, -- Bonestorm
-    {195292}, -- Death's Caress
-    {42650}, -- Army of the Dead
-    {455395}, -- Raise Abomination
-    {207289}, -- Unholy Assault
-    {77575}, -- Outbreak
-    {207317}, -- Epidemic
-    {212552}, -- Wraith Walk
-    {85948}, -- Festering Strike
-    {458128}, -- Festering Scythe
-    {55090}, -- Scourge Strike
-    {207311}, -- Clawing Shadows
-    {63560}, -- Dark Transformation
-    {275699}, -- Apocalypse
-    {390279}, -- Vile Contagion
-    {49206}, -- Summon Gargoyle
-
+    {48792},    -- Icebound Fortitude
+    {343294},    -- Soul Reaper
+    {49039},    -- Lichborne
+    {47541},    -- Death Coil
+    {47568},    -- Empower Rune Weapon
+    {49143},    -- Frost Strike
+    {279302},   -- Frostwyrm's Fury
+    {49184},    -- Howling Blast
+    {51271},    -- Pillar of Frost
+    {49020},    -- Obliterate
+    {196770},   -- Remorseless Winter
+    {152279},   -- Breath of Sindragosa
+    {305392},   -- Chill Streak
+    {57330},    -- Horn of Winter
+    {194913},   -- Glacial Advance
+    {207230},   -- Frostscthe
+    {383269},   -- Abomination Limb
+    {221562},   -- Asphyxiate
+    {327574},   -- Sacrificial Pact
+    {207167},   -- Blinding Sleet
+    {439843},   -- Reaper's Mark
+    {48743},    -- Death Pact
+    {316239,206930,433895,49020,85948},     -- Heart Strike & Vampiric Strike & Obliterate & Runestrike & Festering Strike
+    {195182},   -- Marrowrend
+    {50842},    -- Blood Boil
+    {55233},    -- Vampiric Blood
+    {49028},    -- Dancing Rune Weapon
+    {108199},   -- Gorefiend's Grasp
+    {194679},   -- Rune Tap
+    {221699},   -- Blood Tap
+    {206940},   -- Mark of Blood
+    {219809},   -- Tombstone
+    {206931},   -- Blooddrinker
+    {274156},   -- Consumption
+    {194844},   -- Bonestorm
+    {195292},   -- Death's Caress
+    {42650},    -- Army of the Dead
+    {455395},   -- Raise Abomination
+    {207289},   -- Unholy Assault
+    {77575},    -- Outbreak
+    {207317},   -- Epidemic
+    {212552},   -- Wraith Walk
+    {85948},    -- Festering Strike
+    {458128},   -- Festering Scythe
+    {55090},    -- Scourge Strike
+    {207311},   -- Clawing Shadows
+    {63560},    -- Dark Transformation
+    {275699},   -- Apocalypse
+    {390279},   -- Vile Contagion
+    {49206},    -- Summon Gargoyle
+    {274156},   -- Consumption
     --END DEATHKNIGHT
 
     --MAGE
@@ -385,8 +385,8 @@ local spellIDList = {
     {11426},   -- Ice Barrier
     {235219},  -- Cold Snap
     {190356},  -- Blizzard
-    {108553}, -- Ice Block
-    {12051}, -- Evocation
+    {108553},  -- Ice Block
+    {12051},   -- Evocation
 
     --MAGE END
 
@@ -639,17 +639,17 @@ local spellIDList = {
 {200851}, -- Rage of the sleeper
 {319454}, -- Heart of the Wild
 {8936}, -- Regrowth
-{93402},
-{5176,190984},
-{205636},
-{191034},
-{383410,194223},
-{194153},
-{391528},
+{93402},    --
+{5176,190984},  --
+{205636},   --
+{191034},   --
+{383410,194223},    --
+{194153},   --
+{391528},   --
 {441605}, -- Ravage
 {108238}, -- Renewal 
-{400254},
-{80313},
+{400254},   --
+{80313},    --
 --DRUID END
 
     --EVOKER
