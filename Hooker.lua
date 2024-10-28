@@ -207,7 +207,10 @@ local spellIDList = {
     {212283}, -- Symbols of Death
     {280719}, -- Secret Technique
     {185313}, -- Shadow Dance
-    {381664}, -- Poison
+    {381664}, -- Amplifying Poison
+    {381637}, -- Atrophic Poison
+    {5761}, -- Numbing Poison
+    {315584}, -- Instant Poison
     --END ROUGE
 
     --MONK
@@ -477,7 +480,7 @@ local spellIDList = {
     {64044},   -- Psychic Horror
     {457042,205385},  -- Shadow Crash
     {391109},  -- Dark Ascension
-    {228260,205448},  -- Void Eruption & Void Bolt
+    {228260,205448,231688},  -- Void Eruption & Void Bolt
     {263165},  -- Void Torrent
     {200174},  -- Mindbender
     {34433,451235},   -- Shadowfiend
@@ -518,13 +521,14 @@ local spellIDList = {
     {192106}, -- Lightning Shield
     {974},    -- Earth Shield
     {191634}, -- Stormkeeper
-    {192249}, -- Storm Elemental
+    {198067,192249}, -- Storm Elemental
     {443454}, -- Elemental Blast: Overload
     {8042},   -- Earth Shock
     {79206},    -- Spiritwalker's Grace
     {61882,462620}, -- Earthquake
     {470411}, -- Chain Harvest
     {114050}, -- Ascendance
+    {470194},
 
     --END SHAMAN
 
@@ -644,6 +648,8 @@ local spellIDList = {
 {391528},
 {441605}, -- Ravage
 {108238}, -- Renewal 
+{400254},
+{80313},
 --DRUID END
 
     --EVOKER
@@ -734,17 +740,17 @@ local function BindSpellsToKeysAndColors()
                 if bindingSet then
                     for _, spellID in ipairs(spellIDs) do
                         spellIDColors[spellID] = keyColor.color
-                       print("|cff00ff00Stored color for spell ID:", spellID, "with color:", keyColor.color.r, keyColor.color.g, keyColor.color.b)
+                       dprint("|cff00ff00Stored color for spell ID:", spellID, "with color:", keyColor.color.r, keyColor.color.g, keyColor.color.b)
                     end
-                    print("|cff00ff00Successfully bound " .. keyColor.key .. " to spell: " .. spellName .. " (ID: " .. primarySpellID .. ") with color: " .. table.concat({keyColor.color.r, keyColor.color.g, keyColor.color.b}, ", "))
+                    dprint("|cff00ff00Successfully bound " .. keyColor.key .. " to spell: " .. spellName .. " (ID: " .. primarySpellID .. ") with color: " .. table.concat({keyColor.color.r, keyColor.color.g, keyColor.color.b}, ", "))
                     keyIndex = keyIndex + 1
                 else
-                    print("|cffff0000Failed to bind " .. keyColor.key .. " to spell: " .. spellName)
+                    dprint("|cffff0000Failed to bind " .. keyColor.key .. " to spell: " .. spellName)
                 end
             else
                 for _, spellID in ipairs(spellIDs) do
                     spellIDColors[spellID] = keyColorList[keyIndex - 1].color
-                    print("Stored color for spell ID:", spellID, "with color:", keyColorList[keyIndex - 1].color.r, keyColorList[keyIndex - 1].color.g, keyColorList[keyIndex - 1].color.b)
+                    dprint("Stored color for spell ID:", spellID, "with color:", keyColorList[keyIndex - 1].color.r, keyColorList[keyIndex - 1].color.g, keyColorList[keyIndex - 1].color.b)
                 end
                 dprint("|cffff0000No more keys available for binding. Assigned color to spell: " .. spellName .. " with color: " .. table.concat({keyColorList[keyIndex - 1].color.r, keyColorList[keyIndex - 1].color.g, keyColorList[keyIndex - 1].color.b}, ", "))
             end
@@ -766,7 +772,7 @@ local function UpdateSquareColor(spellID)
     local isChanneling = UnitChannelInfo("player") ~= nil
 
     if isChanneling then
-        dprint("|cffff0000Player is channeling a spell. Square color will be set to black.")
+        dprint("|cff008080Player is channeling a spell. Square color will be set to black.")
         squareFrame.texture:SetColorTexture(0, 0, 0)  -- Set color to black
         return
     end
@@ -780,13 +786,17 @@ local function UpdateSquareColor(spellID)
     end
 end
 
+local lastActionID = nil
+
 local function PrintSpellID(action, wait, depth, slot)
-    if action then
+    if action and slot.actionID ~= lastActionID then
         dprint("|cff00ff00Next spell ID: " .. action .. " (ID: " .. slot.actionID .. ")")
         UpdateSquareColor(slot.actionID)
-    else
+        lastActionID = slot.actionID
+    elseif not action then
         dprint("|cffff0000No action predicted.")
         UpdateSquareColor(nil)
+        lastActionID = nil
     end
 end
 
@@ -812,9 +822,17 @@ local function HookHekili()
     print("|cff00ff00Hekili hooked successfully.")
 end
 
-frame:SetScript("OnEvent", function(self, event, ...)
-    if event == "PLAYER_LOGIN" or event == "PLAYER_SPECIALIZATION_CHANGED" then
-        BindSpellsToKeysAndColors()
-        HookHekili()
-    end
-end)
+    -- Register event listener for channeling end
+    frame:RegisterEvent("PLAYER_LOGIN")
+    frame:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
+    frame:RegisterEvent("UNIT_SPELLCAST_CHANNEL_STOP")
+    frame:SetScript("OnEvent", function(self, event, unit)
+        if event == "PLAYER_LOGIN" or event == "PLAYER_SPECIALIZATION_CHANGED" then
+            BindSpellsToKeysAndColors()
+            HookHekili()
+        end
+        if event == "UNIT_SPELLCAST_CHANNEL_STOP" and unit == "player" then
+            UpdateSquareColor(lastActionID)
+        end
+    end)
+    HookHekili()

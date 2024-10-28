@@ -1,22 +1,58 @@
 -- Initialize the debug mode variable
 local debugMode = false
 
+-- Function to load the saved debug mode setting
+local function LoadDebugMode()
+    if MyAddonSavedVariables and MyAddonSavedVariables.debugMode ~= nil then
+        debugMode = MyAddonSavedVariables.debugMode
+    else
+        debugMode = false
+    end
+end
+
+-- Function to save the debug mode setting
+local function SaveDebugMode()
+    if not MyAddonSavedVariables then
+        MyAddonSavedVariables = {}
+    end
+    MyAddonSavedVariables.debugMode = debugMode
+end
+
+-- Create a frame for debug messages
+local debugFrame = CreateFrame("ScrollingMessageFrame", "DebugFrame", UIParent, "BackdropTemplate")
+debugFrame:SetSize(400, 100)  -- Width, Height
+debugFrame:SetPoint("TOP", UIParent, "TOP", 0, -50)  -- Position at the top center of the screen
+debugFrame:SetFontObject(GameFontNormal)
+debugFrame:SetJustifyH("CENTER")
+debugFrame:SetMaxLines(5)
+debugFrame:EnableMouse(true)
+
+debugFrame:SetBackdropColor(0, 0, 0, 1)
+debugFrame:Hide()  -- Hide by default
+
+-- Function to display debug messages
+local function ShowDebugMessage(message)
+    debugFrame:AddMessage(message)
+    debugFrame:Show()
+end
+
 -- Enhanced dprint function that supports multiple arguments
 function dprint(...)
     if debugMode then
         -- Concatenate all arguments into a single string with spaces in between
         local message = table.concat({...}, " ")
-        print("|cff00ff00[Debug]:|r " .. message)
+        ShowDebugMessage("|cff00ff00[Debug]:|r " .. message)
     end
 end
 
 -- Function to toggle debug mode on or off
 local function ToggleDebugMode()
     debugMode = not debugMode
+    SaveDebugMode()
     if debugMode then
-        print("|cff00ff00Debug mode enabled.|r")
+        ShowDebugMessage("|cff00ff00Debug mode enabled.|r")
     else
-        print("|cffff0000Debug mode disabled.|r")
+        ShowDebugMessage("|cffff0000Debug mode disabled.|r")
     end
 end
 
@@ -24,7 +60,15 @@ end
 SLASH_DEBUG1 = "/debug"
 SlashCmdList["DEBUG"] = ToggleDebugMode
 
-
+-- Load the saved debug mode setting when the addon is loaded
+local frame = CreateFrame("Frame")
+frame:RegisterEvent("ADDON_LOADED")
+frame:SetScript("OnEvent", function(self, event, addonName)
+    if addonName == "test" then  -- Replace with your actual addon name
+        LoadDebugMode()
+        self:UnregisterEvent("ADDON_LOADED")
+    end
+end)
 
 -- Define a table to store frames
 local colorFrames = {}
@@ -76,7 +120,6 @@ local function showSquares()
     end)
 end
 
-
 -- Define an ordered list of keys to ensure specific display order
 local orderedKeys = {
     "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12",
@@ -84,7 +127,6 @@ local orderedKeys = {
     "CTRL-F1", "CTRL-F2", "CTRL-F3", "CTRL-F4", "CTRL-F5", "CTRL-F6", "CTRL-F7", "CTRL-F8", "CTRL-F9", "CTRL-F10", "CTRL-F11", "CTRL-F12",
     "NUMPAD1", "NUMPAD2", "NUMPAD3", "NUMPAD4", "NUMPAD5", "NUMPAD6", "NUMPAD7", "NUMPAD8", "NUMPAD9", "NUMPAD0", "NUMPADDOT", "NUMPADENTER"
 }
-
 
 -- Define a table with colors for each key
 local keyColors = {
