@@ -116,6 +116,7 @@ local spellIDList = {
     {198034}, -- Divine Hammer
     {231895}, -- Crusader
     {432472,432459}, --Holy Bulwark and Sacred Weapon
+    {642},
     --END PALADIN
 
     --HUNTER
@@ -653,35 +654,40 @@ local spellIDList = {
 --DRUID END
 
     --EVOKER
-{361469},  -- Living Flame
-{355936},  -- Emerald Blossom
-{357208},  -- Fire Breath
-{359073},  -- Dream Flight
-{368432},  -- Hover
-{357210,403631},  -- Deep Breath Breath of Eons
-{374251},  -- Cauterizing Flame
-{374227},  -- Zephyr
-{374348},  -- Renewing Blaze
-{370665},  -- Rescue
-{375087},  -- Dragonrage
-{375443},  -- Eternity Surge
-{375982},  -- Time Spiral
-{376788},  -- Dream Projection
-{377509},  -- Rewind
-{378441},  -- Time Dilation
-{378464},  -- Verdant Embrace
-{409311},  -- Prescience
-{395152},  -- Ebon Might
-{356995,395160},  -- Disintegrate Eruption
-{403265},  -- Bronze Attunement
-{361021},  -- Sense Power
-{404977},  -- Time Skip
-{396286},  -- Upheaval
-{360827},  -- Blistering Scales
-{403264},  -- Black Attunement
-{370553},  -- Tip the Scales
-{362969},  -- Azure Strike
---EVOKER END
+    {361469},  -- Living Flame
+    {355936},  -- Emerald Blossom
+    {357208},  -- Fire Breath
+    {359073},  -- Dream Flight
+    {368432},  -- Hover
+    {357210,403631},  -- Deep Breath Breath of Eons
+    {374251},  -- Cauterizing Flame
+    {374227},  -- Zephyr
+    {374348},  -- Renewing Blaze
+    {370665},  -- Rescue
+    {375087},  -- Dragonrage
+    {375443},  -- Eternity Surge
+    {375982},  -- Time Spiral
+    {376788},  -- Dream Projection
+    {377509},  -- Rewind
+    {378441},  -- Time Dilation
+    {378464},  -- Verdant Embrace
+    {409311},  -- Prescience
+    {395152},  -- Ebon Might
+    {356995,395160},  -- Disintegrate Eruption
+    {403265},  -- Bronze Attunement
+    {361021},  -- Sense Power
+    {404977},  -- Time Skip
+    {396286},  -- Upheaval
+    {360827},  -- Blistering Scales
+    {403264},  -- Black Attunement
+    {370553},  -- Tip the Scales
+    {362969},  -- Azure Strike
+    {370452},
+    {355913},
+    {351338},
+    {357221},
+    {357211},
+    --EVOKER END
 
 
 
@@ -740,7 +746,7 @@ local function BindSpellsToKeysAndColors()
                 if bindingSet then
                     for _, spellID in ipairs(spellIDs) do
                         spellIDColors[spellID] = keyColor.color
-                       dprint("|cff00ff00Stored color for spell ID:", spellID, "with color:", keyColor.color.r, keyColor.color.g, keyColor.color.b)
+                        dprint("|cff00ff00Stored color for spell ID:", spellID, "with color:", keyColor.color.r, keyColor.color.g, keyColor.color.b)
                     end
                     dprint("|cff00ff00Successfully bound " .. keyColor.key .. " to spell: " .. spellName .. " (ID: " .. primarySpellID .. ") with color: " .. table.concat({keyColor.color.r, keyColor.color.g, keyColor.color.b}, ", "))
                     keyIndex = keyIndex + 1
@@ -771,8 +777,12 @@ local function UpdateSquareColor(spellID)
     -- Check if the player is channeling a spell
     local isChanneling = UnitChannelInfo("player") ~= nil
 
-    if isChanneling then
-        dprint("|cff008080Player is channeling a spell. Square color will be set to black.")
+    -- Check if the player is empowering a spell
+    local name, _, _, _, _, _, _, _, _, isEmpowering = UnitCastingInfo("player")
+    local isEmpoweringSpell = isEmpowering == true
+
+    if isChanneling or isEmpoweringSpell then
+        dprint("|cff008080Player is channeling or empowering a spell. Square color will be set to black.")
         squareFrame.texture:SetColorTexture(0, 0, 0)  -- Set color to black
         return
     end
@@ -822,17 +832,20 @@ local function HookHekili()
     print("|cff00ff00Hekili hooked successfully.")
 end
 
-    -- Register event listener for channeling end
-    frame:RegisterEvent("PLAYER_LOGIN")
-    frame:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
-    frame:RegisterEvent("UNIT_SPELLCAST_CHANNEL_STOP")
-    frame:SetScript("OnEvent", function(self, event, unit)
-        if event == "PLAYER_LOGIN" or event == "PLAYER_SPECIALIZATION_CHANGED" then
-            BindSpellsToKeysAndColors()
-            HookHekili()
-        end
-        if event == "UNIT_SPELLCAST_CHANNEL_STOP" and unit == "player" then
-            UpdateSquareColor(lastActionID)
-        end
-    end)
+-- Register event listener for channeling and empowering spells
+frame:RegisterEvent("PLAYER_LOGIN")
+frame:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
+frame:RegisterEvent("UNIT_SPELLCAST_CHANNEL_STOP")
+frame:RegisterEvent("UNIT_SPELLCAST_EMPOWER_STOP")
+frame:RegisterEvent("UNIT_SPELLCAST_CHANNEL_START")
+frame:RegisterEvent("UNIT_SPELLCAST_EMPOWER_START")
+frame:SetScript("OnEvent", function(self, event, unit)
+    if event == "PLAYER_LOGIN" or event == "PLAYER_SPECIALIZATION_CHANGED" then
+        BindSpellsToKeysAndColors()
+        HookHekili()
+    end
+    if (event == "UNIT_SPELLCAST_CHANNEL_STOP" or event == "UNIT_SPELLCAST_EMPOWER_STOP" or event == "UNIT_SPELLCAST_CHANNEL_START" or event == "UNIT_SPELLCAST_EMPOWER_START") and unit == "player" then
+        UpdateSquareColor(lastActionID)
+    end
+end)
     HookHekili()
