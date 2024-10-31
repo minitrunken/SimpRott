@@ -618,6 +618,7 @@ local spellIDList = {
     {264130},   -- Power Siphon
     {385899},    -- Soulburn
     {89766,347008,119914,119898}, -- Axe Toss
+    {17877}, -- Shadowburn
     --WARLOCK END
 
     --DRUID
@@ -687,6 +688,9 @@ local spellIDList = {
     {351338},
     {357221},
     {357211},
+    {390386},
+    {364342},
+    {375087},
     --EVOKER END
 
 
