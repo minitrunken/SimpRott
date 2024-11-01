@@ -24,7 +24,7 @@ debugFrame:SetSize(400, 100)  -- Width, Height
 debugFrame:SetPoint("TOP", UIParent, "TOP", 0, -50)  -- Position at the top center of the screen
 debugFrame:SetFontObject(GameFontNormal)
 debugFrame:SetJustifyH("CENTER")
-debugFrame:SetMaxLines(5)
+debugFrame:SetMaxLines(10)
 debugFrame:EnableMouse(true)
 
 debugFrame:SetBackdropColor(0, 0, 0, 1)
@@ -74,7 +74,7 @@ end)
 local colorFrames = {}
 local numSquares = 2
 local squareSize = 2  -- Set square size to 2x2 pixels
-local displayDuration = 10  -- Duration in seconds to display the squares
+local displayDuration = 8  -- Duration in seconds to display the squares
 
 -- Define a table of bright and odd colors
 local colors = {
