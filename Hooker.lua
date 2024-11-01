@@ -695,7 +695,7 @@ local spellIDList = {
     {357208},  -- Fire Breath
     {359073},  -- Dream Flight
     {368432},  -- Hover
-    {357210,403631},  -- Deep Breath Breath of Eons
+    {357210,403631,433874},  -- Deep Breath Breath of Eons
     {374251},  -- Cauterizing Flame
     {374227},  -- Zephyr
     {374348},  -- Renewing Blaze
@@ -722,7 +722,7 @@ local spellIDList = {
     {355913}, -- Emerald Blossom
     {351338}, -- Quell
     {357221}, -- Fire Breath
-    {357211}, -- Living Flame
+    {357211}, -- Pyre
     {390386}, -- Hover
     {364342}, -- Deep Breath
     {358385}, -- Eternity Surge
@@ -738,7 +738,7 @@ local spellIDList = {
     {372048}, -- Oppressing Roar
     {374968}, -- Time Spiral
     {368847}, -- Firestorm
-
+    {443328}, -- Engulf
     --EVOKER END
 
 
