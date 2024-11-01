@@ -19,7 +19,7 @@ local classSpecSpells = {
     MONK = { [1] = 107428, [2] = 100780, [3] = 107428 },
     DRUID = { [1] = 194153, [2] = 1822, [3] = 6807, [4] = 5176 },
     DEMONHUNTER = { [1] = 344862, [2] = 344862 },
-    EVOKER = { [1] = 357211, [2] = 100780, [3] = 107428 }
+    EVOKER = { [1] = 357211, [2] = 100780, [3] = 395160 }
 }
 
 -- Helper function to get the spell ID based on class and spec

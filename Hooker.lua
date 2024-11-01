@@ -683,14 +683,27 @@ local spellIDList = {
     {403264},  -- Black Attunement
     {370553},  -- Tip the Scales
     {362969},  -- Azure Strike
-    {370452},
-    {355913},
-    {351338},
-    {357221},
-    {357211},
-    {390386},
-    {364342},
-    {375087},
+    {370452}, -- Shattering Star
+    {355913}, -- Emerald Blossom
+    {351338}, -- Quell
+    {357221}, -- Fire Breath
+    {357211}, -- Living Flame
+    {390386}, -- Hover
+    {364342}, -- Deep Breath
+    {358385}, -- Eternity Surge
+    {369459}, -- Blessing of the Bronze
+    {406732}, -- Time Spiral
+    {374251}, -- Cauterizing Flame
+    {363916}, -- Rescue
+    {412710}, -- Zephyr
+    {408233}, -- Dream Projection
+    {365585}, -- Rewind
+    {360995}, -- Dream Flight
+    {360806}, -- Spiritbloom
+    {372048}, -- Oppressing Roar
+    {374968}, -- Time Spiral
+    {368847}, -- Firestorm
+
     --EVOKER END
 
 
