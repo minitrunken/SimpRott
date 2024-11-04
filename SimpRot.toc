@@ -6,11 +6,6 @@
 ## SavedVariables: MyAddonSavedVariables
 
 
-##spellist.lua
 combatchecker.lua
 Hooker.lua
 debug.lua
-##healer.lua
-##Disc.lua
-##debuff.lua
-

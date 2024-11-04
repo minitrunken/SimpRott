@@ -6,6 +6,18 @@ frame.texture = frame:CreateTexture(nil, "BACKGROUND")
 frame.texture:SetAllPoints(frame)
 frame.texture:SetColorTexture(0, 0, 0, 1)
 
+-- Create the alert frame (a red square)
+local alertFrame = CreateFrame("Frame", nil, UIParent)
+alertFrame:SetSize(2, 2) -- Width, Height
+alertFrame:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 4, 0) 
+alertFrame:Hide() -- Hide by default
+alertFrame.texture = alertFrame:CreateTexture(nil, "BACKGROUND")
+alertFrame.texture:SetAllPoints(alertFrame)
+alertFrame.texture:SetColorTexture(1, 0, 0) -- Red color with 50% opacity
+
+
+
+
 local classSpecSpells = {
     WARRIOR = { [1] = 1464, [2] = 1464, [3] = 1464 },
     PALADIN = { [1] = 35395, [2] = 35395, [3] = 35395 },
@@ -21,6 +33,7 @@ local classSpecSpells = {
     DEMONHUNTER = { [1] = 344862, [2] = 344862 },
     EVOKER = { [1] = 357211, [2] = 100780, [3] = 395160 }
 }
+
 
 -- Helper function to get the spell ID based on class and spec
 local function GetSpellID()
@@ -86,6 +99,7 @@ frame:RegisterEvent("PLAYER_TARGET_CHANGED")  -- Fires when you change your targ
 frame:RegisterEvent("UNIT_COMBAT")            -- Detects when you hit or are hit by a target
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")  -- Fires when you log in or reload UI (to ensure correct initial state)
 frame:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")  -- Fires when you change your specialization
+frame:RegisterEvent("UI_ERROR_MESSAGE")
 
 -- Set script to handle events
 frame:SetScript("OnEvent", UpdateFrameColor)
@@ -93,6 +107,13 @@ frame:SetScript("OnEvent", UpdateFrameColor)
 -- Set script to handle OnUpdate for more frequent updates
 frame:SetScript("OnUpdate", function(self, elapsed)
     UpdateFrameColor()
+end)
+
+frame:SetScript("OnEvent", function(self, event, errorType, message)
+    if event == "UI_ERROR_MESSAGE" and message == "Target needs to be in front of you." then
+        alertFrame:Show()
+        C_Timer.After(0.5, function() alertFrame:Hide() end) -- Hide after 2 seconds
+    end
 end)
 
 -- Initial color update

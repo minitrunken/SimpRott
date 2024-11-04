@@ -576,7 +576,9 @@ local spellIDList = {
     {390163}, -- Sigil of Spite
     {207407}, -- Soul Carver
     {258860}, -- Essence Break
+    {183752}, -- Disrupt
     --452486
+
     -- END DEMON HUNTER
 
     -- WARLOCK
