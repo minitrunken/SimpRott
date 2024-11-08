@@ -582,8 +582,8 @@ local spellIDList = {
     -- END DEMON HUNTER
 
     -- WARLOCK
-    {172,348},     -- Corruption Immolate
-    {686,29722},     -- Shadow Bolt Incinerate
+    {172,348,445468},     -- Corruption Immolate
+    {686,29722,388667,434506},     -- Shadow Bolt Incinerate
     {689},     -- Drain Life 
     {698},     -- Ritual of Summoning
     {702},     -- Curse of Weakness
@@ -598,7 +598,7 @@ local spellIDList = {
     {324536},  -- Malefic Rapture
     {333889},  -- Fel Domination
     {17962},   -- Conflagrate
-    {116858},  -- Chaos Bolt
+    {116858,137046,434635},  -- Chaos Bolt
     {80240,200546},  -- Havoc Bane of Havoc
     {5740},  -- Rain of Fire
     {152108},  -- Cataclysm
@@ -621,6 +621,27 @@ local spellIDList = {
     {385899},    -- Soulburn
     {89766,347008,119914,119898}, -- Axe Toss
     {17877}, -- Shadowburn
+    {386105},
+    {334275},
+    {1714},
+    {5484},
+    {6789},
+    {328774},
+    {710},
+    {108416},
+    {384069},
+    {108503},
+    {1122},
+    {6353},
+    {316099},
+    {27243},
+    {205179},
+    {278350},
+    {205180},
+    {386997},
+    {417537},
+    {387976},
+    {442726},
     --WARLOCK END
 
     --DRUID
