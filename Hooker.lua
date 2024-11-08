@@ -538,7 +538,7 @@ local spellIDList = {
     {198013}, -- Eye Beam
     {188499,210152}, -- Blade Dance
     {191427}, -- Metamorphosis (Havoc)
-    {185123,442294}, -- Throw Glaive
+    {185123,442294,204157}, -- Throw Glaive
     {258920}, -- Immolation Aura
     {196718}, -- Darkness
     {198589}, -- Blur
@@ -615,7 +615,7 @@ local spellIDList = {
     {267217}, -- Nether Portal
     {264130}, -- Power Siphon
     {265187}, -- Summon Demonic Tyrant
-    {264119,455476,455449}, -- Summon Vilefiend
+    {264119,455476,455449,455465}, -- Summon Vilefiend
     {386833}, -- Guillotine
     {264130},   -- Power Siphon
     {385899},    -- Soulburn
